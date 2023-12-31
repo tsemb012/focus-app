@@ -12,9 +12,26 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.tsemb.focus_app.ui.theme.FocusappTheme
 
+
+
+//TODO Bitriseの導入
+    //TODO コードサイズと複雑性分析
+    //TODO Danger
+    //TODO リリースの自動化
+    // TODO セキュリティスキャン
+
+//TODO コードラビットの導入
+
+//TODO GithubActionsを導入
+//TODO Asanaでのプロジェクト管理
+//TODO SonarQube
+
 //TODO マルチモジュール化
+//TODO ライブラリ管理を修正
+//TODO
+//TODO Hiltの導入
+//TODO KMP化
 //TODO テストコード
-//TODO KMP
 //TODO ADHD
 //TODO Ci/CD
 //TODO コミット自動化
