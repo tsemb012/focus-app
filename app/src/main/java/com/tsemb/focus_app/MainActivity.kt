@@ -17,6 +17,9 @@ import com.tsemb.focus_app.ui.theme.FocusappTheme
 //TODO Bitriseの導入
     //TODO コードサイズと複雑性分析
     //TODO Danger
+        //TODO githubApps
+    //TODO klint
+    //TODO detekt
     //TODO リリースの自動化
     // TODO セキュリティスキャン
 
