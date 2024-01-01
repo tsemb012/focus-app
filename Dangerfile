@@ -1,13 +1,14 @@
-# Sometimes it's a README fix, or something like that - which isn't relevant for
-# including in a project's CHANGELOG for example
-declared_trivial = github.pr_title.include? "#trivial"
+# コードレビューのコメント
+message("PRが開始されました。レビューを行います。")
 
-# Make it more obvious that a PR is a work in progress and shouldn't be merged yet
-warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
+# 変更されたファイルに対するチェック
+warn("ビッグPRですね！") if git.lines_of_code > 500
 
-# Warn when there is a big PR
-warn("Big PR") if git.lines_of_code > 500
+# テストコードの確認
+fail("新しいコードに対するテストが見当たりません。") if git.modified_files.include?("app/src/main/") && !git.modified_files.include?("app/src/test/")
 
-# Don't let testing shortcuts get into master by accident
-fail("fdescribe left in tests") if `grep -r fdescribe specs/ `.length > 1
-fail("fit left in tests") if `grep -r fit specs/ `.length > 1
+# android_lintの実行
+android_lint.gradle_task = "app:lint"
+android_lint.report_file = "app/build/reports/lint-results.xml"
+android_lint.filtering = true
+android_lint.lint(inline_mode: true)
