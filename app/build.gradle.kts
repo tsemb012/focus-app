@@ -7,13 +7,16 @@ android {
     namespace = "com.tsemb.focus_app"
     compileSdk = 33
 
+    lint {
+        xmlReport = true
+    }
+
     defaultConfig {
         applicationId = "com.tsemb.focus_app"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
-//
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
