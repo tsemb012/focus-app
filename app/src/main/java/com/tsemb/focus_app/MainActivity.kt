@@ -12,34 +12,32 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.tsemb.focus_app.ui.theme.FocusappTheme
 
-//テスト
+// テスト
 
-//TODO Bitriseの導入
-    //TODO コードサイズと複雑性分析
-    //TODO Danger
-        //TODO githubApps
-    //TODO klint
-    //TODO detekt
-    //TODO リリースの自動化
-    // TODO セキュリティスキャン
+// TODO Bitriseの導入
+// TODO コードサイズと複雑性分析
+// TODO Danger
+// TODO githubApps
+// TODO klint
+// TODO detekt
+// TODO リリースの自動化
+// TODO セキュリティスキャン
 
-//TODO コードラビットの導入
+// TODO コードラビットの導入
 
-//TODO GithubActionsを導入
-//TODO Asanaでのプロジェクト管理
-//TODO SonarQube
+// TODO GithubActionsを導入
+// TODO Asanaでのプロジェクト管理
+// TODO SonarQube
 
-//TODO マルチモジュール化
-//TODO ライブラリ管理を修正
-//TODO
-//TODO Hiltの導入
-//TODO KMP化
-//TODO テストコード
-//TODO ADHD
-//TODO Ci/CD
-//TODO コミット自動化
-
-
+// TODO マルチモジュール化
+// TODO ライブラリ管理を修正
+// TODO
+// TODO Hiltの導入
+// TODO KMP化
+// TODO テストコード
+// TODO ADHD
+// TODO Ci/CD
+// TODO コミット自動化
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,7 +47,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.background,
                 ) {
                     Greeting("Android")
                 }
@@ -62,7 +60,7 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
-        modifier = modifier
+        modifier = modifier,
     )
 }
 
