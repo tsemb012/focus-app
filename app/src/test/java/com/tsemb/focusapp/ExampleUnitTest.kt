@@ -1,4 +1,4 @@
-package com.tsemb.focus_app
+package com.tsemb.focusapp
 
 import org.junit.Assert.*
 import org.junit.Test

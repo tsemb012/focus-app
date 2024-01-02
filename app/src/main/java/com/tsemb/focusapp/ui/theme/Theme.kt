@@ -1,4 +1,4 @@
-package com.tsemb.focus_app.ui.theme
+package com.tsemb.focusapp.ui.theme
 
 import android.app.Activity
 import android.os.Build

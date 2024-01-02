@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.tsemb.focus_app"
+    namespace = "com.tsemb.focusapp"
     compileSdk = 33
 
     lint {
@@ -13,7 +13,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.tsemb.focus_app"
+        applicationId = "com.tsemb.focusapp"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
