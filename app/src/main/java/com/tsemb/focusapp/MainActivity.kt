@@ -16,7 +16,10 @@ import com.tsemb.focusapp.ui.theme.FocusappTheme
 // DONE コードサイズと複雑性分析
 // DONE Danger
 // DONE detekt
-// TODO detekt Bitriseに入れる。
+// DONE detekt Bitrise に入れる。
+
+  //TODO DangerとAndroidLint, detektのログを出力する。
+  //TODO 問題点を指摘するように修正
 // TODO リリースの自動化
 // TODO DeployGateに出す
 // TODO GooglePlayConsoleから出すように
