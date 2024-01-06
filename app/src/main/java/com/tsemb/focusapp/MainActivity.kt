@@ -17,21 +17,29 @@ import com.tsemb.focusapp.ui.theme.FocusappTheme
 // DONE Danger
 // DONE detekt
 // DONE detekt Bitrise に入れる。
+  //DONE Danger と AndroidLint, detekt のログを出力する。
+//DONE READMEの配置
+  //DONE READMEに配置する内容を考える
+  //DONE 問題点を指摘するように修正　→　detektと指摘される多すぎるのでいらない　→　
 
-  //TODO DangerとAndroidLint, detektのログを出力する。
-  //TODO 問題点を指摘するように修正
-// TODO リリースの自動化
-// TODO DeployGateに出す
-// TODO GooglePlayConsoleから出すように
-// TODO テスト導入
 // TODO コードラビットの導入
+// TODO 管理を行う
+// TODO DeployGateに出す
+    //TODO qa/* の
+// TODO GithubActionsでタスク管理を自動化
+
+
+// TODO リリースの自動化
+    // TODO 正規リリースできる環境を整える
+    // TODO GooglePlayConsoleから出すように
+
+// TODO テスト導入
 // TODO ライブラリ管理を修正
 // TODO マルチモジュール化
 // TODO コミット自動化
 // TODO Hiltの導入
 // TODO KMP化
 
-// TODO GithubActionsを導入
 // TODO Asanaでのプロジェクト管理
 // TODO SonarQube
 
