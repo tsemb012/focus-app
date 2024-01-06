@@ -1,4 +1,6 @@
-package com.tsemb.focus_app.ui.theme
+@file:Suppress("MagicNumber")
+
+package com.tsemb.focusapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
