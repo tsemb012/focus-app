@@ -1,4 +1,4 @@
-name: OpenAI Reviewer
+name: Code Review
 
 permissions:
   contents: read
@@ -6,9 +6,8 @@ permissions:
 
 on:
   pull_request_target:
-    types: [opened, synchronize, reopened]
-  pull_request_review_comment:
-    types: [created]
+    types: [ opened, synchronize, reopened ]
+
 
 concurrency:
   group:
@@ -26,14 +25,11 @@ jobs:
           repository: ${{github.event.pull_request.head.repo.full_name}}
           ref: ${{github.event.pull_request.head.ref}}
           submodules: false
-      - uses: ./
+      - uses: coderabbitai/ai-pr-reviewer@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
           debug: true
+          review_simple_changes: false
           review_comment_lgtm: false
-          openai_heavy_model: gpt-4
-          path_filters: |
-            !dist/**
-            !**/*.lock
