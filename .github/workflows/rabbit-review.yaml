@@ -5,10 +5,12 @@ permissions:
   pull-requests: write
 
 on:
+  [push]:
   pull_request_target:
     types: [opened, synchronize, reopened]
   pull_request_review_comment:
     types: [created]
+
 
 concurrency:
   group:
@@ -26,9 +28,14 @@ jobs:
           repository: ${{github.event.pull_request.head.repo.full_name}}
           ref: ${{github.event.pull_request.head.ref}}
           submodules: false
-      - uses: ./
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
+      - uses: coderabbitai/openai-pr-reviewer@latest
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GITHUBから自動で付与される
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
           debug: true
